@@ -1,8 +1,9 @@
 {
   "compilerOptions": {
-    "allowSyntheticDefaultImports": false,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
     "target": "es5",
-    "module": "commonjs",
+    "module": "esnext",
     "jsx": "react",
     "moduleResolution": "node",
     "noImplicitAny": false,
@@ -12,7 +13,7 @@
     "strictNullChecks": true,
     "preserveConstEnums": true,
     "sourceMap": true,
-    "lib": ["es2015", "es2016", "dom"],
+    "lib": ["dom", "esnext"],
     "types": ["node"]
   }
 }

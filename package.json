@@ -7,6 +7,11 @@
     "dist",
     "src"
   ],
+  "repository": {
+    "url": "https://github.com/IvanManuel/immz-product-card",
+    "type": "git"
+  },
+  "homepage": "https://github.com/IvanManuel",
   "engines": {
     "node": ">=10"
   },
@@ -14,6 +19,7 @@
     "start": "tsdx watch",
     "build": "tsdx build",
     "test": "tsdx test --passWithNoTests",
+    "test:watch": "tsdx test --watch",
     "lint": "tsdx lint",
     "prepare": "tsdx build",
     "size": "size-limit",
@@ -48,13 +54,20 @@
   ],
   "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e",
   "devDependencies": {
+    "@types/react-test-renderer": "^19.0.0",
+    "@babel/preset-env": "^7.26.0",
+    "@babel/preset-react": "^7.26.3",
     "@rollup/plugin-image": "^3.0.3",
     "@size-limit/preset-small-lib": "^11.1.6",
-    "@types/react": "^19.0.2",
-    "@types/react-dom": "^19.0.2",
+    "@types/react": "^16.9.11",
+    "@types/react-dom": "^16.8.4",
+    "babel-jest": "^29.7.0",
     "husky": "^9.1.7",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^29.7.0",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-test-renderer": "^17.0.2",
     "rollup-plugin-postcss": "^4.0.2",
     "size-limit": "^11.1.6",
     "tsdx": "^0.14.1",
@@ -63,5 +76,16 @@
   },
   "dependencies": {
     "postcss": "^8.4.49"
+  },
+  "keywords": [
+    "production",
+    "card",
+    "ivanmanuel"
+  ],
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "identity-obj-proxy",
+      "\\.(css|less|scss|sass)$": "identity-obj-proxy"
+    }
   }
 }
